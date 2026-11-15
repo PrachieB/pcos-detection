@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>PCOS risk check</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div id="demo-banner" class="banner" hidden></div>
+
+  <header class="top">
+    <div class="wrap top-inner">
+      <h1 id="t-title">PCOS risk check</h1>
+      <div class="lang" role="group" aria-label="Language">
+        <button type="button" data-lang="en" aria-pressed="true">English</button>
+        <button type="button" data-lang="hi" aria-pressed="false">हिन्दी</button>
+      </div>
+    </div>
+  </header>
+
+  <main class="wrap layout">
+    <form id="form" class="form" novalidate>
+      <p id="t-lede" class="lede"></p>
+      <div id="fields"></div>
+
+      <label class="switch">
+        <input type="checkbox" id="has-labs">
+        <span id="t-haslabs"></span>
+      </label>
+      <fieldset id="labs" class="group" hidden></fieldset>
+
+      <button type="submit" id="check" class="primary"></button>
+    </form>
+
+    <aside class="result" aria-live="polite">
+      <div class="panel">
+        <svg id="dial" viewBox="0 0 220 128" role="img" aria-label="Risk dial"></svg>
+        <p id="band" class="band"></p>
+        <p id="empty" class="muted"></p>
+        <div id="detail" hidden>
+          <ul id="advice" class="advice"></ul>
+          <h2 id="t-why"></h2>
+          <ul id="factors" class="factors"></ul>
+          <button type="button" id="download" class="secondary"></button>
+        </div>
+        <p id="error" class="error" role="alert" hidden></p>
+      </div>
+      <p id="disclaimer" class="fine"></p>
+      <p id="privacy" class="fine"></p>
+    </aside>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
